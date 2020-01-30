@@ -28,7 +28,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <span>Write new tweet</span>
+      <span class="toggle">Write new tweet</span>
     </nav>
     <header>
       <div>
@@ -43,11 +43,18 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
+        <div class="error">
+          <p>Whoops, there is no tweet!</p>
+          <p>Please type in text</p>
+        </div>
+        <div class="errorTwo">
+          <p>Whoops, your message is too long!</p>
+          <p>Please shorten your tweet</p>
+        </div>
         <form method="POST" action="/tweets">
           <textarea class="textbox" name="text" placeholder="What are you humming about?"></textarea>
           <footer>
-            <input type="submit" value="Tweet">
+            <input type="submit" value="Tweet" class="submit">
             <span class="counter">140</span>
           </footer>
         </form>

@@ -67,60 +67,40 @@ const renderTweets = function(tweets) {
   }
 }
 
-// $(document).ready(function() {
-// $(".new-tweet form").submit(function(event) {
-//   event.preventDefault();
-//   const $data = $(this).serialize()
-//   if ($data.slice(5) === "" || $data.slice(5) === null) {
-//     alert("Please enter tweet");
-//     return; 
-//   }
-//   // } else ($data.slice(5).length > 140) {
-//   //   alert("Please shorten tweet")
-//   //   return;
-//   // } 
-//   $.ajax({
-//     type: 'POST',
-//     url: "/tweets",
-//     data: $data,
-//     dataType: JSON,
-//     success: loadTweets()
-//   });
-//   // .done(function(data) {
-//   //   loadTweets();
-//   // })
-// });
-// });
-
 $(document).ready(function() {
+  $(".toggle").click(function() { // if clicked 
+    $(".new-tweet").slideToggle();
+  })
+  $(".error").hide();
+  $(".errorTwo").hide();
   $(".new-tweet form").submit(function(event) {
     event.preventDefault();
     const $data = $(this).serialize()
-    if ($data.slice(5) === "" || $data.slice(5) === null || $data.slice(5).length > 140){
-      alert("Error");
+    if ($data.slice(5) === "" || $data.slice(5) === null) {
+      $(".error").slideDown();
       return;
-    } 
+    } else if (data.slice(5).length > 140) {
+      $(".errorTwo").slideDown();
+      return;
+    } else {
+    $(".error").slideUp();
+    $(".errorTwo").slideUp();
     $.ajax({
       type: 'POST',
       url: "/tweets",
       data: $data,
       dataType: JSON,
       success: loadTweets()
-    })
-    // .done(function(data) {
-    //   loadTweets();
-    // })
+    })}
   });
   });
-
-
 
 const loadTweets = function () {
   $.ajax( "/tweets", {
     method: "GET"
   })
   .then(response => {
-    // (".feed").empty();
+    $(".feed").empty();
     renderTweets(response);
   })
 };
