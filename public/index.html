@@ -6,24 +6,71 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <!--External CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="styles/new-tweet.css" type="text/css">
+    <link rel="stylesheet" href="styles/existing-tweet.css" type="text/css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <span>Write new tweet</span>
     </nav>
+    <header>
+      <div>
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
+          <h2>Anonymous</h2>
+      </div>
+    </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <!-- <h2>Compose Tweet</h2> -->
+        <form method="POST" action="/tweets">
+          <textarea class="textbox" name="text" placeholder="What are you humming about?"></textarea>
+          <footer>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </footer>
+        </form>
+      </section>
+   <section class="feed"> 
+        <article class="existing-tweet">
+          <div class="existing-tweet-top">
+            <img src="/images/profile-hex.png" /> 
+            <p>Anonymous</p>
+            <p class="push">Twitter Handle</p>
+          </div>
+          <div class="tweet-body">
+            <p>
+              This is a tweet
+            </p>
+          </div>
+          <footer class="existing-tweet-bottom">
+            <p>
+              10 days
+            </p> 
+          </footer> 
+          </article>
+      </section>
+  </main> 
   </body>
-</html>
+</html> 

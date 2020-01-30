@@ -18,8 +18,34 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body span {
+  font-family: 'Bungee', cursive;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+   background-color:#f4f1ec;
+   width: 90%;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ p {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ section.feed {
+  width: 100%;
+  margin: 0 auto;
+ }

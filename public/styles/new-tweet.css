@@ -1,0 +1,31 @@
+.new-tweet {
+  padding: 30px 0 ;
+  width: 100%;
+}
+
+.new-tweet .textbox {
+  align-items: center;
+  background-color:#f4f1ec;
+  border: #f4f1ec;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  color: black;
+  line-height: 1rem;
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+
+.new-tweet footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+
+.new-tweet input {
+  background-color:#4056A1;
+  color: white;
+  font-family: 'Bungee', cursive;
+}
+
