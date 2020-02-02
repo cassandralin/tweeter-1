@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="styles/header.css" type="text/css" />
     <link rel="stylesheet" href="styles/new-tweet.css" type="text/css">
     <link rel="stylesheet" href="styles/existing-tweet.css" type="text/css">
+    <link rel="stylesheet" href="styles/responsive.css" type="text/css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -24,24 +26,26 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
+
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
       <span class="toggle">Write new tweet</span>
     </nav>
+    <div class="flex-container" style="display: flex;">
     <header>
-      <div>
+      <div class="header-img">
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Anonymous</h2>
+          <h2 class="header-title">Anonymous</h2>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main style="flex-direction: column;">
       <section class="new-tweet">
         <div class="error">
           <p>Whoops, there is no tweet!</p>
@@ -79,5 +83,6 @@
           </article>
       </section>
   </main> 
+    </div>
   </body>
 </html> 

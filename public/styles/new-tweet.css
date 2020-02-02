@@ -1,6 +1,7 @@
 .new-tweet {
   padding: 30px 0 ;
-  width: 100%;
+  width: 75%;
+  margin-top: 15%;
 }
 
 .new-tweet .textbox {

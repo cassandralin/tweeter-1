@@ -1,0 +1,52 @@
+  
+  
+/*   
+  /* Another tablet breakpoint is maximum width of 1024px */
+  /* @media only screen and (max-width: 1024px) { */
+    /* Write CSS rules that target Tablets screen sizes downwards - including smartphones */
+  /* }  */
+
+  /* Another tablet breakpoint is minimum width of 768px */
+  /* @media only screen and (min-width: 768px) { */
+    /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
+    /* .feature {
+      width: 33.3%;
+      line-height: 600px;
+    }
+  
+    .content {
+      width: 66.7%;
+      float: right
+    }
+  
+    .footer {
+      clear: right;
+    }
+  } */
+
+  /* Laptops / Desktops: minimum width of 1024px */
+  @media only screen and (min-width: 1024px) {
+    /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+    .body {
+      line-height: 300px;
+      text-align: right;
+    }
+    header {
+      width: 33.3%;
+    }
+
+    .new-tweet {
+      text-align: right;
+      width: 75%;
+    }
+
+    .existing-tweet {
+      width: 75%;
+      margin: 0 auto;
+    } */
+    /* .main {
+      max-width: 1024px;
+      font-size: 16px;
+      margin: 0 auto;
+    }
+  /* } */
