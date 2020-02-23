@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nav {
   position: fixed;
   z-index: 1;
@@ -11,3 +12,32 @@ nav {
   justify-content: space-between;
 }
 
+=======
+.logo {
+  font-family: 'Bungee', cursive;
+  font-size: 40px;
+}
+
+nav {
+  height: 120px;
+  position: fixed;
+  width: 100%;
+  padding: 1.5em;
+  background-color: #4056A1;
+  color: #FFFF;
+  z-index: 999;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-btn {
+  font-size: 20px; 
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.toggle-btn:hover {
+  cursor: pointer;
+}
+>>>>>>> 1d091a97ecabc98b7f3a22409192330ff0c1bfcd
