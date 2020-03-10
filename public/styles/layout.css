@@ -10,59 +10,154 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;  
+  height: 500px;
+  display: grid;
+  grid-template-rows: 120px 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'nav' 'header' 'main';
+}
+
+
+.container {
+  position: relative;
+  background-color: #f4f1ec;
+  width: 90%;
+  margin: 0 auto;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-tweet{
+  padding: 20px;
+  display: none;
+}
+
+article.tweet {
+  padding: 10px;
+  border: 3px solid black;
+  padding-top: 5px;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+}
+
+.icons{
+  opacity: 0;
+}
+
+
+article:hover{
+  box-shadow: 5px 5px gold;
+}
+
+article:hover .icons {
+  opacity: 1;
+}
+
+.tweetHeader{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-main {
-  width: 90%;
-  margin: 0 auto;
-  background-color: inherit;
+.userInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
- main {
-   background-color:#f4f1ec;
-   width: 90%;
-   margin: 0 auto;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
- }
 
- p {
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
+article.tweet .handle{
+  color: lightgray
+}
 
- section.feed {
-  width: 100%;
-  margin: 0 auto;
- }
+article.tweet .actualTweet {
+  padding: 10px;
+  border-bottom: 5px solid black;
+}
 
- @media only screen and (min-width: 1024px) {
-  #flex-container {
-    display: -webkit-flex;
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.tweet .tweetHeader .userInfo .userAvatar{
+
+  width: 30px;
+  height: 30px; 
+}
+
+ #titleBar{
+
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+
+body#titleBar .toggleButton {
+  font-size: 20px;
+  
+}
+
+.toggleArrows {
+ 
+  width: 20px;
+  height: 25px;
+  
+}
+
+.undertogglebutton {
+  text-align: right;
+  padding-right: 86px;
+}
+
+#error{
+  color:#D8000C;
+  display: none;
+}
+
+.userIMG {
+  padding-top: 15px;;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .userIMG {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
   }
 
-  main {
-    margin: 0;
-    width: 60%;
-    padding-top: 120px;
-    margin-left: auto;
-    margin-right: 1em;
+  .container {
+    grid-area: tweets;
+    display: flex;
+    justify-content: right;
+
+  }
+
+  body {
+    grid-template-rows: 120px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'nav nav' 'profile tweets';
+    
+  }
+
+  #mainHeader{
+    max-width: 60vw;
+    margin-left: 20px;;
   }
 }
