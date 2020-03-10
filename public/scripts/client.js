@@ -3,8 +3,7 @@ const escape =  function(str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
-
-// push the tweets to append
+console.log("TEST")
 const renderTweets = function(tweets) {
   let markupArray = [];
 
@@ -16,7 +15,6 @@ const renderTweets = function(tweets) {
   $("#tweets-container").prepend(contain);
 };
 
-// mockup of the articles to be replaced
 const createTweetElement = function(data) {
   const markup = `
   <article class="tweet"> 

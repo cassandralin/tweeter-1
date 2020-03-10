@@ -52,7 +52,7 @@ article.tweet {
 
 
 article:hover{
-  box-shadow: 5px 5px gold;
+  box-shadow: 5px 5px lightslategrey;
 }
 
 article:hover .icons {
