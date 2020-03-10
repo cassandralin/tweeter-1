@@ -1,35 +1,16 @@
-<<<<<<< HEAD
+// Loads documents, counts text input and changes count + colour 
 $(document).ready(function() {
-  $(".textbox").on("keydown", function() {
-    let num = 140;
-    let value = this.value.length;
-    $(".counter").text(num - value);
-    if (value <= num) {
-    $(".counter").css("color", "green");
+  $(".textForm").on("input", function() {
+    let count = this.text.value.length;
+    let remaining = 140 - count;
+    console.log("input",count)
+    console.log("remaining", remaining)    
+    if(remaining < 0) {
+      $(".counter").css({"color": "red"})
     } else {
-        $('.counter').css("color", "red");
-    }
-  });
-  
+      $(".counter").css({"color": "black"})
+    }  
+    $(".counter").text(remaining);
+  })
 });
 
-
-
-
-
-=======
-$(document).ready(() => {
-  const max = 140;
-  $("#tweet-area").keyup(() => {
-    $(".error").text('');q
-    const count = $(`#tweet-area`).val().length;
-    const remaining = max - count;
-    $("#counter").text(remaining);
-    if (remaining > 0) {
-      $("#counter").css("color", "ED6A5A");
-    } else {
-      $("#counter").css("color", "red");
-    }
-  });
-})
->>>>>>> 1d091a97ecabc98b7f3a22409192330ff0c1bfcd
