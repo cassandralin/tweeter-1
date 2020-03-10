@@ -1,58 +1,15 @@
-.new-tweet {
-  padding: 30px 0 ;
-  width: 75%;
-  margin-top: 15%;
-}
+ .new-tweet h2 {
+  text-align: center;
+} 
 
-.new-tweet .textbox {
-  align-items: center;
-  background-color:#f4f1ec;
-  border: #f4f1ec;
-  border-bottom-width: 4px;
-  border-bottom-style: solid;
-  border-bottom-color: black;
-  color: black;
-  line-height: 1rem;
-  max-width: 100%;
-  min-width: 100%;
+.new-tweet form textarea {
+
   width: 100%;
+  border: none;
+  border-bottom: black 5px solid;
 }
 
-.new-tweet footer {
+.underTextBox {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.7rem;
-}
-
-.new-tweet input {
-  background-color:#4056A1;
-  color: white;
-  font-family: 'Bungee', cursive;
-}
-
-#tweet-area {
-  width: 100%;
-  background-color: inherit;
-  overflow: hidden;
-  border: none;
-  border-bottom: 4px #545149 solid;
-}
-
-#counter {
-  float: right;
-  font-family: 'Bungee', cursive;
-}
-
-.btn {
-  font-family: 'Bungee', cursive;
-  background-color: #4056A1;
-  color: white;
-  font-size: 24px;
-  padding: 5px 10px;
-}
-
-.error {
-  color: red;
-  font-size: 19px;
-  margin-left: 10px;
 }
