@@ -4,8 +4,10 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
-!["Screenshot of initial page on load"](https://github.com/cassandralin/tweeter-1/docs/TweeterFirstPage.png?raw=true)
+!["Screenshot of initial page on load"](https://github.com/cassandralin/tweeter-1/docs/TweeterFirstPage.png)
 !["Screenshot of an example tweet"](https://github.com/cassandralin/tweeter-1/master/docs/TweeterFirstTweet.png?raw=true)
+
+docs/TweeterFirstPage.png
 
 
 ## Getting Started
